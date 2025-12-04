@@ -3,7 +3,6 @@ package main
 import (
 	"bufio"
 	"fmt"
-	"log"
 	"os"
 	"strconv"
 )
@@ -12,7 +11,8 @@ func main() {
 	file, err := os.Open("../puzzle_input.txt")
 
 	if err != nil {
-		log.Fatalf("failed to open file: %v", err)
+		fmt.Printf("Failed to open file: %v\n", err)
+		return
 	}
 
 	defer file.Close()
